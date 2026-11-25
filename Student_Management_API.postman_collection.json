@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "Student Management REST API",
+    "description": "Postman tests for all five required CRUD endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - All Students",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/students"
+      }
+    },
+    {
+      "name": "GET - Student by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/students/1"
+      }
+    },
+    {
+      "name": "POST - Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Faiz\",\n  \"course\": \"BCA\"\n}"
+        },
+        "url": "http://localhost:3000/students"
+      }
+    },
+    {
+      "name": "PUT - Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Faiz Khan\",\n  \"course\": \"BCA Cybersecurity\"\n}"
+        },
+        "url": "http://localhost:3000/students/1"
+      }
+    },
+    {
+      "name": "DELETE - Remove Student",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/students/1"
+      }
+    }
+  ]
+}
